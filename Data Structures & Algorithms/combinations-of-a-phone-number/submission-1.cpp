@@ -1,0 +1,113 @@
+class Solution {
+public:
+    void populate(vector<string>& ans,string as, string digits,int i)
+    {
+        if(i==digits.size())
+        {ans.push_back(as);return;}
+        if(digits[i]=='2')
+        {
+            as.push_back('a');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('b');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('c');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }
+        if(digits[i]=='7')
+        {
+            as.push_back('p');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('q');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('r');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('s');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='8')
+        {
+            as.push_back('t');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('u');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('v');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='9')
+        {
+            as.push_back('w');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('x');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('y');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('z');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='3')
+        {
+            as.push_back('d');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('e');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('f');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='4')
+        {
+            as.push_back('g');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('h');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('i');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='5')
+        {
+            as.push_back('j');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('k');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('l');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }if(digits[i]=='6')
+        {
+            as.push_back('m');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('n');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+            as.push_back('o');
+            populate(ans,as,digits,i+1);
+            as.pop_back();
+        }
+
+    }
+    vector<string> letterCombinations(string digits) {
+        if(digits=="")
+        return {};
+        vector<string> ans;
+        string as;
+        populate(ans,as,digits,0);
+        return ans;
+    }
+};
